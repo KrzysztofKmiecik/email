@@ -27,9 +27,11 @@ public class EmailUtil {
             msg.addHeader("format", "flowed");
             msg.addHeader("Content-Transfer-Encoding", "8bit");
 
-            msg.setFrom(new InternetAddress("krzysztof.kmiecik@aptiv.com", "NoReply-JD"));
+        //    msg.setFrom(new InternetAddress("krzysztof.kmiecik@aptiv.com", "NoReply-JD"));
+            msg.setFrom(new InternetAddress("eoltserverprod@eoltserverprod.com", "NoReply-JD"));
 
-            msg.setReplyTo(InternetAddress.parse("krzysztof.kmiecik@aptiv.com", false));
+         //   msg.setReplyTo(InternetAddress.parse("krzysztof.kmiecik@aptiv.com", false));
+            msg.setReplyTo(InternetAddress.parse("eoltserverprod@eoltserverprod.com", false));
 
             msg.setSubject(subject, "UTF-8");
 
@@ -55,8 +57,10 @@ public class EmailUtil {
 
             System.out.println("SimpleEmail Start");
 
-            String smtpHostServer = "smtp.aptiv.com";
-            String emailID = "krzysztof_kmiecik@wp.pl";
+           // String smtpHostServer = "smtp.aptiv.com";
+            String smtpHostServer = "10.235.244.25";
+          //  String emailID = "krzysztof.kmiecik@aptiv.com";
+            String emailID = "eoltserverprod@eoltserverprod.com";
 
             Properties props = System.getProperties();
 
