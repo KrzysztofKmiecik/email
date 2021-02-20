@@ -1,0 +1,58 @@
+
+
+Popularne serwery mailowe
+https://www.computerworld.pl/news/Maly-serwer-pocztowy-dla-malej-firmy,385634.html
+
+https://www.kompikownia.pl/index.php/2019/09/26/wlasny-serwer-pocztowy-postfix-dovecot-i-ssl/
+
+youtube using JavaMail with ApacheJames
+https://www.youtube.com/watch?v=kFOr5BImqTI
+
+https://james.apache.org
+
+https://hub.docker.com/r/linagora/james-jpa-sample/tags?page=1&ordering=last_updated
+docker run -p "25:25" -p "143:143" linagora/james-jpa-sample:latest
+
+domain : james.local
+user01@james.local
+password: 1234
+this James server will respond to IMAP port 143 and SMTP port 25
+
+
+Ustawić plik hosts
+
+/etc 1m 13s
+❯ cat nano hosts
+cat: nano: No such file or directory
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+127.0.0.1       james.local
+255.255.255.255	broadcasthost
+::1             localhost
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
+
+
+
+
+
+
+
+
+
+
+Thunderbuild
+https://www.thunderbird.net/pl/
+
+Konfiguracja Thunderbird
+https://pomoc.home.pl/baza-wiedzy/konfiguracja-programu-pocztowego-mozilla-thunderbird#instrukcja
+
+https://www.dev2qa.com/how-to-connect-localhost-apache-james-with-thunderbird/
+
