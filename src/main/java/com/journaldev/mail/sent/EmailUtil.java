@@ -58,9 +58,9 @@ public class EmailUtil {
             System.out.println("SimpleEmail Start");
 
            // String smtpHostServer = "smtp.aptiv.com";
-            String smtpHostServer = "10.235.244.25";
+            String smtpHostServer = "james.local";
           //  String emailID = "krzysztof.kmiecik@aptiv.com";
-            String emailID = "eoltserverprod@eoltserverprod.com";
+            String emailID = "user01@james.local";
 
             Properties props = System.getProperties();
 

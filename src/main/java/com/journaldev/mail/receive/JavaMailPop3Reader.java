@@ -9,14 +9,14 @@ public class JavaMailPop3Reader {
     public static void main(String args[]) throws Exception {
 
         // mail server connection parameters
-        String host = "";
-        String user = "";
-        String password = "";
+        String host = "james.local";
+        String user = "user01@james.local";
+        String password = "1234";
 
         // connect to my pop3 inbox
         Properties properties = System.getProperties();
         Session session = Session.getDefaultInstance(properties);
-        Store store = session.getStore("pop3");
+        Store store = session.getStore("imap");
         store.connect(host, user, password);
         Folder inbox = store.getFolder("Inbox");
         inbox.open(Folder.READ_ONLY);

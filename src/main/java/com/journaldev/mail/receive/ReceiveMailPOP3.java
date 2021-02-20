@@ -7,16 +7,16 @@ import javax.mail.*;
 import javax.mail.internet.MimeBodyPart;
 
 public class ReceiveMailPOP3 {
-    private static final String HOST = "pop.gmail.com";
-    private static final String USERNAME = "mojetesty7777@gmail.com";
-    private static final String PASSWORD = "mp3cdsmp3cds";
+    private static final String HOST = "james.local";
+    private static final String USERNAME = "user01@james.local";
+    private static final String PASSWORD = "1234";
 
     public static void doit() throws MessagingException, IOException {
         Folder folder = null;
         Store store = null;
         try {
             Properties props = new Properties();
-            props.put("mail.store.protocol", "pop3s"); // Google uses POP3S not POP3
+            props.put("mail.store.protocol", "imap"); // Google uses POP3S not POP3
             Session session = Session.getDefaultInstance(props);
             // session.setDebug(true);
             store = session.getStore();

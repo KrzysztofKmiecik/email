@@ -11,15 +11,13 @@ import javax.mail.URLName;
 
 
 public class ReadTest {
-    static String protocol = "pop3";
- /*   static String host = "pop.gmail.com";
-    static String user = "mojetesty7777@gmail.com";
-    static String password = "mp3cdsmp3cds";*/
- static String host = "10.235.244.25";
-    static String user = "krzysztof.kmiecik@aptiv.com";
-    static String password = "1qaz@WSX#EDC$";
+    static String protocol = "imap";
+    static String host = "james.local";
+    static String user = "user01@james.local";
+    static String password = "1234";
 
-    static String port = "995";
+
+    static String port = "143";
     static String url = null;
     static String root = null;
     static String pattern = "%";
@@ -35,8 +33,8 @@ public class ReadTest {
         System.out.println(props.toString());
 
         //Before opening session, set port number and ssl authentication
-        props.put("mail.pop3.port", "995");
-        props.put("mail.pop3.ssl.enable", "true");
+        props.put("mail.imap.port", "143");
+    //    props.put("mail.pop3.ssl.enable", "true");
 
         //properties are added correctly?
         System.out.println(props.toString());

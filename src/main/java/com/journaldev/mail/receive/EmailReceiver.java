@@ -36,7 +36,7 @@ public class EmailReceiver {
         properties.put(String.format("mail.%s.port", protocol), port);
 
         // SSL setting
-        properties.setProperty(
+   /*     properties.setProperty(
                 String.format("mail.%s.socketFactory.class", protocol),
                 "javax.net.ssl.SSLSocketFactory");
         properties.setProperty(
@@ -44,7 +44,7 @@ public class EmailReceiver {
                 "false");
         properties.setProperty(
                 String.format("mail.%s.socketFactory.port", protocol),
-                String.valueOf(port));
+                String.valueOf(port));*/
 
         return properties;
     }
@@ -149,18 +149,18 @@ public class EmailReceiver {
      */
     public static void main(String[] args) {
         // for POP3
-     /*   String protocol = "pop3";
-        String host = "pop.gmail.com";
-        String port = "995";*/
+        String protocol = "imap";
+        String host = "james.local";
+        String port = "143";
 
         // for IMAP
-        String protocol = "imap";
+      /*  String protocol = "imap";
         String host = "imap.gmail.com";
-        String port = "993";
+        String port = "993";*/
 
 
-        String userName = "mojetesty7777@gmail.com";
-        String password = "mp3cdsmp3cds";
+        String userName = "user01@james.local";
+        String password = "1234";
 
         EmailReceiver receiver = new EmailReceiver();
         receiver.downloadEmails(protocol, host, port, userName, password);
