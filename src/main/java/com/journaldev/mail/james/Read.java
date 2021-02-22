@@ -5,9 +5,13 @@ import java.util.Properties;
 
 public class Read {
     public static void main(String[] args) throws Exception {
-        String host = "james.local";
+/*        String host = "james.local";
         String username = "user01@james.local";
-        String password = "1234";
+        String password = "1234";*/
+
+        String host = "eoltserverprod.local";
+        String username = "mail@eoltserverprod.local";
+        String password = "sretset";
 
 
         Properties properties=new Properties();

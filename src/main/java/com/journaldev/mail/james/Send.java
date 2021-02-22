@@ -15,8 +15,9 @@ public class Send {
        // String sender="jack@mycomp.com";
         String sender="user02@localhost";
       //  String receiver="john@localhost";
-        String receiver="user01@james.local";
-        String subject="Greetings222222";
+      //  String receiver="user01@james.local";
+        String receiver="mail@eoltserverprod.local";
+        String subject="Greetings2222223333";
 
 
         Properties p=new Properties();
@@ -27,7 +28,7 @@ public class Send {
         msg.setFrom(new InternetAddress(sender));
         msg.setRecipient(Message.RecipientType.TO,new InternetAddress(receiver));
         msg.setSubject(subject);
-        msg.setText("Hello! how do you do?");
+        msg.setText("Aptiv is OK");
         Transport.send(msg);
 
     }
