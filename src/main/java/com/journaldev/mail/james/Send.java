@@ -13,6 +13,7 @@ public class Send {
     public static void main(String[] args) throws Exception {
         String host  = "localhost";
        // String sender="jack@mycomp.com";
+
         String sender="user02@localhost";
       //  String receiver="john@localhost";
       //  String receiver="user01@james.local";

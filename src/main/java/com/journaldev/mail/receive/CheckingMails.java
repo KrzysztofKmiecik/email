@@ -62,10 +62,10 @@ public class CheckingMails {
 
     public static void main(String[] args) {
 
-        String host = "james.local";// change accordingly
+        String host = "eoltserverprod.local";// change accordingly
         String mailStoreType = "imap";
-        String username = "user01@james.local";// change accordingly
-        String password = "1234";// change accordingly
+        String username = "mail@eoltserverprod.local";// change accordingly
+        String password = "sretset";// change accordingly
 
         check(host, mailStoreType, username, password);
 

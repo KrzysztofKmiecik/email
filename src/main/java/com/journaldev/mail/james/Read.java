@@ -11,7 +11,7 @@ public class Read {
 
         String host = "eoltserverprod.local";
         String username = "mail@eoltserverprod.local";
-        String password = "*****";
+        String password = "sretset";
 
 
         Properties properties=new Properties();

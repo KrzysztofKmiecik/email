@@ -18,6 +18,8 @@ public class EmailUtil {
      * @param subject
      * @param body
      */
+
+
     public static void sendEmail(Session session, String toEmail, String subject, String body){
         try
         {
@@ -57,10 +59,10 @@ public class EmailUtil {
 
             System.out.println("SimpleEmail Start");
 
-           // String smtpHostServer = "smtp.aptiv.com";
-            String smtpHostServer = "james.local";
-          //  String emailID = "krzysztof.kmiecik@aptiv.com";
-            String emailID = "user01@james.local";
+           String smtpHostServer = "smtp.aptiv.com";
+          //  String smtpHostServer = "james.local";
+            String emailID = "marek.drzadzewski@aptiv.com";
+           // String emailID = "user01@james.local";
 
             Properties props = System.getProperties();
 
@@ -68,7 +70,7 @@ public class EmailUtil {
 
             Session session = Session.getInstance(props, null);
 
-            sendEmail(session, emailID,"Aptiv is OK", "Aptiv is OK");
+            sendEmail(session, emailID,"Aptiv is OK", "artykuł o NI device simulation  ->  https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019Nw0SAE&l=pl-PL");
 
 
         }
