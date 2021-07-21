@@ -1,18 +1,18 @@
 package com.journaldev.mail.sent;
 
-import java.util.Date;
-import java.util.Properties;
-
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Date;
+import java.util.Properties;
 
 public class EmailUtil {
 
     /**
      * Utility method to send simple HTML email
+     *
      * @param session
      * @param toEmail
      * @param subject
@@ -20,19 +20,18 @@ public class EmailUtil {
      */
 
 
-    public static void sendEmail(Session session, String toEmail, String subject, String body){
-        try
-        {
+    public static void sendEmail(Session session, String toEmail, String subject, String body) {
+        try {
             MimeMessage msg = new MimeMessage(session);
             //set message headers
             msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
             msg.addHeader("format", "flowed");
             msg.addHeader("Content-Transfer-Encoding", "8bit");
 
-        //    msg.setFrom(new InternetAddress("krzysztof.kmiecik@aptiv.com", "NoReply-JD"));
+            //    msg.setFrom(new InternetAddress("krzysztof.kmiecik@aptiv.com", "NoReply-JD"));
             msg.setFrom(new InternetAddress("eoltserverprod@eoltserverprod.com", "NoReply-JD"));
 
-         //   msg.setReplyTo(InternetAddress.parse("krzysztof.kmiecik@aptiv.com", false));
+            //   msg.setReplyTo(InternetAddress.parse("krzysztof.kmiecik@aptiv.com", false));
             msg.setReplyTo(InternetAddress.parse("eoltserverprod@eoltserverprod.com", false));
 
             msg.setSubject(subject, "UTF-8");
@@ -46,8 +45,7 @@ public class EmailUtil {
             Transport.send(msg);
 
             System.out.println("EMail Sent Successfully!!");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -59,10 +57,15 @@ public class EmailUtil {
 
             System.out.println("SimpleEmail Start");
 
-           String smtpHostServer = "smtp.aptiv.com";
-          //  String smtpHostServer = "james.local";
-            String emailID = "marek.drzadzewski@aptiv.com";
-           // String emailID = "user01@james.local";
+            //  String smtpHostServer = "smtp.aptiv.com";
+            //  String emailID = "marek.drzadzewski@aptiv.com";
+            //   String emailID = "krzysztof.kmiecik@aptiv.com";
+
+            // String smtpHostServer = "james.local";
+            //  String emailID = "user01@james.local";
+
+            String smtpHostServer = "eoltserverprod.aptiv.com";
+            String emailID = "mail@eoltserverprod.aptiv.com";
 
             Properties props = System.getProperties();
 
@@ -70,7 +73,7 @@ public class EmailUtil {
 
             Session session = Session.getInstance(props, null);
 
-            sendEmail(session, emailID,"Aptiv is OK", "artykuł o NI device simulation  ->  https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019Nw0SAE&l=pl-PL");
+            sendEmail(session, emailID, "Aptiv is OK", "artykuł o NI device simulation  ->  https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019Nw0SAE&l=pl-PL");
 
 
         }
